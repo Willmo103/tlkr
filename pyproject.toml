@@ -10,5 +10,5 @@ dependencies = []
 members = [
     "tlkr-server",
     "tlkr-core",
-    "tlkr-core/tlkr-cli",
+    "tlkr-cli",
 ]
