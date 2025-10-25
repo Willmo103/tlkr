@@ -20,9 +20,8 @@ class GenerationRecord(BaseModel):
     id: UUID = Field(default_factory=lambda: uuid4())
     text: str
     model_name: str
-    piper_config: str = Field(
-        default_factory=lambda val: val.to_dict() if val else None
-    )
+    # Optional Piper configuration; default to None
+    piper_config: Optional[str] = None
     audio_path: str
 
 
@@ -32,7 +31,8 @@ class PiperModel(BaseModel):
     Attributes:
         name (str): The name of the model.
         onnx_path (Path): Path to the ONNX model file.
-        config_path (Optional[Path]): Optional path to the model configuration file.
+        config_path (Optional[Path]): Optional path to the model
+            configuration file.
     """
     name: str
     onnx_path: Path
