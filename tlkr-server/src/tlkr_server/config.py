@@ -9,9 +9,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-APP_ROOT = Path(__file__).parent.parent.parent.resolve()
-GENERATIONS_DIR = APP_ROOT / "generations"
-MODELS_DIR = APP_ROOT / "models"
+SERVER_ROOT = Path(__file__).parent.parent.parent.resolve()
+GENERATIONS_DIR = SERVER_ROOT / "generations"
+MODELS_DIR = SERVER_ROOT / "models"
 # Nothing needs to use HF_TOKEN directly as long as its loaded from the env if
 # present. Downloading models from HF might block the request, so having this
 # to check beforehand is useful for custom checking logic if I chose to add it

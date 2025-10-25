@@ -11,4 +11,5 @@ members = [
     "tlkr-server",
     "tlkr-core",
     "tlkr-cli",
+    "core",
 ]
