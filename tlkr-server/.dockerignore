@@ -1,0 +1,8 @@
+.git
+.venv
+.gitignore
+Dockerfile
+# mounted volume
+models/
+# mounted volume
+generations/

@@ -7,11 +7,26 @@ authors = [
     { name = "WIll Morris", email = "88165849+Willmo103@users.noreply.github.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "flask>=3.1.2",
+    "gunicorn>=23.0.0",
+    "piper-tts>=1.3.0",
+    "python-dotenv>=1.1.1",
+]
 
 [project.scripts]
-tlkr-server = "tlkr_server:main"
+server = "tlkr_server:main"
 
 [build-system]
 requires = ["uv_build>=0.8.22,<0.9.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "uvicorn>=0.38.0",
+]
+
+[tool.uv]
+required-environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'"
+]
