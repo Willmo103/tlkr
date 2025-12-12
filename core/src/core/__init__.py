@@ -1,2 +1,2 @@
-def hello() -> str:
-    return "Hello from core!"
+from .config import *  # noqa
+from .schemas import *  # noqa
